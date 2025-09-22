@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>16 个可点击 MP4 视频画廊 — 跳转播放</title>
+  <style>
+    :root{--bg:#0f1724;--card:#0b1220;--accent:#7dd3fc}
+    html,body{height:100%;margin:0;font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans", "Helvetica Neue", Arial; background:linear-gradient(180deg,#071021 0%, #071827 100%);color:#e6eef8}
+    .wrap{max-width:1200px;margin:28px auto;padding:18px}
+    h1{margin:0 0 14px;font-size:20px;font-weight:600;color:var(--accent)}
+    .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:14px}
+
+    .card{display:block;text-align:left;background:rgba(255,255,255,0.02);border-radius:12px;overflow:hidden;cursor:pointer;box-shadow:0 6px 18px rgba(2,6,23,0.6);transition:transform .12s ease, box-shadow .12s ease;border:0;text-decoration:none;color:inherit}
+    .card:focus{outline:3px solid rgba(125,211,252,.12)}
+    .card:hover{transform:translateY(-6px);box-shadow:0 12px 30px rgba(2,6,23,0.7)}
+
+    .thumb{position:relative;padding-top:56.25%;background:#05131f}
+    .thumb img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+    .thumb .play{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:56px;height:56px;border-radius:999px;background:rgba(0,0,0,0.45);display:grid;place-items:center}
+    .thumb .play svg{width:22px;height:22px;fill:var(--accent)}
+
+    .meta{padding:10px 12px}
+    .meta h3{margin:0;font-size:14px;color:#dff6ff}
+    .meta p{margin:6px 0 0;font-size:12px;color:#9fb7c9}
+
+    @media (max-width:480px){ .meta h3{font-size:13px} }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>16 个可点击 MP4 视频画廊</h1>
+    <p style="margin:0 0 16px;color:#bcdbe8;font-size:13px">点击任意缩略图将跳转到视频文件（在新标签页打开并播放）。将 <code>videos/video1.mp4</code> 替换为你的文件路径或 URL。</p>
+
+    <div class="grid" id="gallery">
+      <!-- 使用 &lt;a&gt; 标签直接跳转到视频（target="_blank" 新标签打开） -->
+
+      <a class="card" href="videos/video1.mp4" target="_blank" rel="noopener" aria-label="打开视频 1">
+        <div class="thumb">
+          <img src="posters/poster1.jpg" alt="视频 1 封面" loading="lazy">
+          <div class="play" aria-hidden="true">
+            <svg viewBox="0 0 24 24" focusable="false" aria-hidden="true"><path d="M8 5v14l11-7z"></path></svg>
+          </div>
+        </div>
+        <div class="meta">
+          <h3>视频 1</h3>
+          <p>简介或时长（可选）</p>
+        </div>
+      </a>
+
+      <a class="card" href="videos/video2.mp4" target="_blank" rel="noopener" aria-label="打开视频 2">
+        <div class="thumb"><img src="posters/poster2.jpg" alt="视频 2 封面" loading="lazy"><div class="play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg></div></div>
+        <div class="meta"><h3>视频 2</h3><p></p></div>
+      </a>
+
+      <a class="card" href="videos/video3.mp4" target="_blank" rel="noopener" aria-label="打开视频 3">
+        <div class="thumb"><img src="posters/poster3.jpg" alt="视频 3 封面" loading="lazy"><div class="play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg></div></div>
+        <div class="meta"><h3>视频 3</h3><p></p></div>
+      </a>
+
+      <a class="card" href="videos/video4.mp4" target="_blank" rel="noopener" aria-label="打开视频 4">
+        <div class="thumb"><img src="posters/poster4.jpg" alt="视频 4 封面" loading="lazy"><div class="play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg></div></div>
+        <div class="meta"><h3>视频 4</h3><p></p></div>
+      </a>
+
+      <a class="card" href="videos/video5.mp4" target="_blank" rel="noopener" aria-label="打开视频 5">
+        <div class="thumb"><img src="posters/poster5.jpg" alt="视频 5 封面" loading="lazy"><div class="play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg></div></div>
+        <div class="meta"><h3>视频 5</h3><p></p></div>
+      </a>
+
+      <a class="card" href="videos/video6.mp4" target="_blank" rel="noopener" aria-label="打开视频 6">
+        <div class="thumb"><img src="posters/poster6.jpg" alt="视频 6 封面" loading="lazy"><div class="play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg></div></div>
+        <div class="meta"><h3>视频 6</h3><p></p></div>
+      </a>
+
+      <a class="card" href="videos/video7.mp4" target="_blank" rel="noopener" aria-label="打开视频 7">
+        <div class="thumb"><img src="posters/poster7.jpg" alt="视频 7 封面" loading="lazy"><div class="play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg></div></div>
+        <div class="meta"><h3>视频 7</h3><p></p></div>
+      </a>
+
+      <a class="card" href="videos/video8.mp4" target="_blank" rel="noopener" aria-label="打开视频 8">
+        <div class="thumb"><img src="posters/poster8.jpg" alt="视频 8 封面" loading="lazy"><div class="play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg></div></div>
+        <div class="meta"><h3>视频 8</h3><p></p></div>
+      </a>
+
+      <a class="card" href="videos/video9.mp4" target="_blank" rel="noopener" aria-label="打开视频 9">
+        <div class="thumb"><img src="posters/poster9.jpg" alt="视频 9 封面" loading="lazy"><div class="play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg></div></div>
+        <div class="meta"><h3>视频 9</h3><p></p></div>
+      </a>
+
+      <a class="card" href="videos/video10.mp4" target="_blank" rel="noopener" aria-label="打开视频 10">
+        <div class="thumb"><img src="posters/poster10.jpg" alt="视频 10 封面" loading="lazy"><div class="play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg></div></div>
+        <div class="meta"><h3>视频 10</h3><p></p></div>
+      </a>
+
+      <a class="card" href="videos/video11.mp4" target="_blank" rel="noopener" aria-label="打开视频 11">
+        <div class="thumb"><img src="posters/poster11.jpg" alt="视频 11 封面" loading="lazy"><div class="play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg></div></div>
+        <div class="meta"><h3>视频 11</h3><p></p></div>
+      </a>
+
+      <a class="card" href="videos/video12.mp4" target="_blank" rel="noopener" aria-label="打开视频 12">
+        <div class="thumb"><img src="posters/poster12.jpg" alt="视频 12 封面" loading="lazy"><div class="play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg></div></div>
+        <div class="meta"><h3>视频 12</h3><p></p></div>
+      </a>
+
+      <a class="card" href="videos/video13.mp4" target="_blank" rel="noopener" aria-label="打开视频 13">
+        <div class="thumb"><img src="posters/poster13.jpg" alt="视频 13 封面" loading="lazy"><div class="play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg></div></div>
+        <div class="meta"><h3>视频 13</h3><p></p></div>
+      </a>
+
+      <a class="card" href="videos/video14.mp4" target="_blank" rel="noopener" aria-label="打开视频 14">
+        <div class="thumb"><img src="posters/poster14.jpg" alt="视频 14 封面" loading="lazy"><div class="play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg></div></div>
+        <div class="meta"><h3>视频 14</h3><p></p></div>
+      </a>
+
+      <a class="card" href="videos/video15.mp4" target="_blank" rel="noopener" aria-label="打开视频 15">
+        <div class="thumb"><img src="posters/poster15.jpg" alt="视频 15 封面" loading="lazy"><div class="play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg></div></div>
+        <div class="meta"><h3>视频 15</h3><p></p></div>
+      </a>
+
+      <a class="card" href="videos/video16.mp4" target="_blank" rel="noopener" aria-label="打开视频 16">
+        <div class="thumb"><img src="posters/poster16.jpg" alt="视频 16 封面" loading="lazy"><div class="play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg></div></div>
+        <div class="meta"><h3>视频 16</h3><p></p></div>
+      </a>
+
+    </div>
+  </div>
+
+  <!-- 简单的无 JS 版本：点击直接跳转到 mp4。若需改为同页播放或专门的 player.html，请说明 -->
+</body>
+</html>
